@@ -1,11 +1,18 @@
-function Home() {
-  return (
-    <main className="bg-amber-700 p-4 flex flex-col gap-6 md:items-center">
-      
-      <h1>hello</h1>
+import { useEffect, useState } from "react";
 
-    </main>
+export default function Home() {
+  const [msg, setMsg] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:5000/health")
+      .then(res => res.json())
+      .then(data => setMsg(data.message));
+  }, []);
+
+  return (
+    <div className="flex flex-col items-center justify-center">
+      <h1 className="text-amber-500">Frontend radi</h1>
+      <p className="text-amber-500">{msg}</p>
+    </div>
   );
 }
-
-export default Home;

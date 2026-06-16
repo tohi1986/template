@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <header className="flex items-center justify-evenly p-4 border-b">
+    <header className="bg-amber-800 font-semibold flex items-center justify-evenly p-4 border-b">
         <h1>logo</h1>
       {/* mobile menu icon */}
       <button className="md:hidden">☰</button>
