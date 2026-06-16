@@ -10,8 +10,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="text-amber-500">Frontend radi</h1>
+    <div className="font-semibold flex flex-col items-center justify-center">
+      <h1 className="text-amber-500">FE - working</h1>
       <p className="text-amber-500">{msg}</p>
     </div>
   );
